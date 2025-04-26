@@ -12,19 +12,29 @@
           extend: {
             fontFamily: {
               rounded: ["'M PLUS Rounded 1c'", "sans-serif"],
-              aladdin: ["'Aladdin'", "cursive"], // ← ここ追加！
-            }
-          }
-        }
+              aladdin: ["'Aladdin'", "cursive"],
+            },
+            keyframes: {
+              fadein: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '3', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              fadein: 'fadein 1s ease-out forwards',
+            },
+          },
+        },
       }
-    </script>    
+    </script>
+    
       <style>@font-face {
         font-family: 'Aladdin';
         src: url('./fonts/Aladdin.ttf') format('truetype');
       }
       </style>
 </head>
-<body class="flex-col">
+<body class="flex-col opacity-0 animate-fadein">
     <section id="TOP" class="aspect-[3/2] bg-cover bg-center flex-col items-center bg-gradient-to-b from-indigo-900 to-purple-700 text-white text-4xl bg-black/40 backdrop-blur-sm" style="background-image: url('./pic/genie_lp_bg.png');">
     </section>
 
@@ -110,6 +120,7 @@
         </div>
       </div>
     </section>
+    
     <section id="map" class="bg-[#1a1a40] text-yellow-300 py-12 px-6">
       <h2 class="text-2xl font-rounded mb-4">Genieに会える場所</h2>
       <iframe 
