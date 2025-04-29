@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genie LP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              rounded: ["'M PLUS Rounded 1c'", "sans-serif"],
+              aladdin: ["'Aladdin'", "cursive"],
+            },
+            keyframes: {
+              fadein: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "3", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              fadein: "fadein 1s ease-out forwards",
+              fadeinSlow: "fadein 3s ease-out forwards",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      @font-face {
+        font-family: "Aladdin";
+        src: url("./fonts/Aladdin.ttf") format("truetype");
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

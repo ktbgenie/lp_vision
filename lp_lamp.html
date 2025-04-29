@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genie LP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              rounded: ["'M PLUS Rounded 1c'", "sans-serif"],
+              aladdin: ["'Aladdin'", "cursive"],
+            },
+            keyframes: {
+              fadein: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "3", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              fadein: "fadein 1s ease-out forwards",
+              fadeinSlow: "fadein 3s ease-out forwards",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      @font-face {
+        font-family: "Aladdin";
+        src: url("./fonts/Aladdin.ttf") format("truetype");
+      }
+    </style>
+  </head>
+  <header
+    class="sticky top-0 w-full flex justify-between items-center px-8 h-16 bg-[#1a1a40] text-yellow-300 text-xl font-rounded z-50"
+  >
+    <div>
+      <nav class="flex gap-4">
+        <a href="#TOP">TOP</a>
+        <a href="#Hero">概要</a>
+        <a href="#About">Genieとは？</a>
+        <a href="#Construct">システム紹介</a>
+        <a href="#Map">アクセス</a>
+        <a href="#Contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+  <body
+    class="m-0 flex flex-col opacity-0 animate-fadein duration-2000 max-w-[1200px] mx-auto"
+  >
+
+      <section
+      id="TOP"
+      class="aspect-[3/2] bg-cover bg-center flex justify-center items-center"
+      style="background-image: url('./img/lamp_lp_hero.png')"
+    >
+    <section class="hero bg-[url('./img/lamp_lp_hero.png')]">
+      <h1 class="text-9xl">Lamp</h1>
+      <p>自分の願いを言語化するシステム</p>
+    </section>
+
+    <section class="features">
+      <h2>こんな人におすすめ</h2>
+      <ul>
+        <li>やりたいことがモヤモヤしている</li>
+        <li>就活軸が定まらない</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <a href="#Contact" class="btn">今すぐ診断してみる</a>
+    </section>
+    <footer
+      class="flex justify-center items-center bg-[#1a1a40] text-yellow-300 py-8 px-4 text-sm text-xs"
+    >
+      &copy; 2025 Genie Inc. All rights reserved.
+    </footer>
+  </body>
+</html>
